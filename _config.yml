@@ -3,13 +3,13 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Poole
-tagline:          The Jekyll Butler
+title:            Aaron's blog
+tagline:          Coffee, Pastries, and code
 url:              http://getpoole.com
 paginate:         1
 baseurl:          /
 author:
-  name:           Aaron Hil
+  name:           Aaron Hill
   url:            No twitter yet!
   email:          aahill@vassar.edu
 
