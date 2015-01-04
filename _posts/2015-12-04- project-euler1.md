@@ -27,17 +27,21 @@ public static int bruteForceMethod(){
 
 A more elegant solution is to simply utilize <a href="http://en.wikipedia.org/wiki/Arithmetic_progression">arithmetic progression</a> 
 to find the solution. Using this principle we can find the solution in O(1) as opposed to O(n)!
+
 -----
+
 To solve the problem, we need the sum of the multiples up to 1000, less the multiples of 15
-written out, we can express this problem as below
-- sum = (multiples of 3) + (multiples of 5) - (multiples of 15)
+written out, we can express this problem as below:
+* sum = (multiples of 3) + (multiples of 5) - (multiples of 15)
 
-more formally we get the expanded equation
-- sum = (3+6+9+...+ 999) + (5+10+15+...+995) - (15+30+45+...+990)
+more formally we get the expanded equation:
+* sum = (3+6+9+...+ 999) + (5+10+15+...+995) - (15+30+45+...+990)
 
-we can further extract the greatest common factor from each term
-- sum = 3(1+2+3+...+ 333) + 5(1+2+3+...+199) - 15(1+2+3+...+ 66)
+we can further extract the greatest common factor from each term:
+* sum = 3(1+2+3+...+ 333) + 5(1+2+3+...+199) - 15(1+2+3+...+ 66)
+
 -----
+
 we can quickly find the sum of the arithmetic progression (AKA. a arithmetic series) by using the formula
 **n(a+b)/2**, where:
 - a = the first number in the series
