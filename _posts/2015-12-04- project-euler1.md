@@ -58,9 +58,9 @@ sum them together, as seen below.
 
 {%highlight java %}
 public static int findArithmeticSeries(int a, int b, int n){
-        int ans = n * (a + b)/2;
-        return ans;
-        }
+    int ans = n * (a + b)/2;
+    return ans;
+}
         
 public static int elegantMethod(){
 	int multsOf3 = findArithmeticSeries(1,333,333);
