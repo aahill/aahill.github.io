@@ -3,8 +3,8 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Aaron's blog
-tagline:          Coffee, Pastries, and code
+title:            Aaron Hill
+tagline:          
 url:              http://aahill.github.io
 paginate:         1
 baseurl:          /
