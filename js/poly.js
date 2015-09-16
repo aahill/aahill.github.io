@@ -7,7 +7,9 @@ var ctx = canvas.getContext("2d");
 var gradient = ctx.createLinearGradient(0,0,170,0);
 
 function generateColor(){
-    return '#'+Math.floor(Math.random()*16777215).toString(16);
+    var color ='#'+Math.floor(Math.random()*16777215).toString(16);
+    console.log(color);
+    return color;
 }
 
 for(var i=0; i<MAX_STOPS; i++){
