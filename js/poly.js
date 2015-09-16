@@ -29,7 +29,7 @@ for(var i=0; i<MAX_STOPS; i++){
 }
 
 //randomly place points on the canvas
-for(var i=0; i< numTrianglePointsPoints; i++){
+for(var i=0; i< numTrianglePoints; i++){
 	var x = generateWholeNum(0,300);
 	var y = generateWholeNum(0,300);
 	ctx.fillRect(x,y,1,1);
