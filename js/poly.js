@@ -43,24 +43,18 @@ for(var i=0; i< numTrianglePoints; i++){
 //begin triangulation process
 var triangleVertices = Delaunay.triangulate(trianglePoints);
 
-for(var i=0; i < triangleVertices.length - triangleVertices.length % 3; i += 2){
-    var vertRef = triangleVertices[i];
-    var point1 = trianglePoints[vertRef];
-    var point2 = trianglePoints[vertRef+1];
-    var point3 = trianglePoints[vertRef+2];
+for(var i=0; i < triangleVertices.length - 1 - triangleVertices.length % 3; i += 3){
+    var point1 = trianglePoints[triangleVertices[i]];
+    var point2 = trianglePoints[triangleVertices[i+1]];
+    var point3 = trianglePoints[triangleVertices[i+2]];
+    console.log(i);
     //line 1
     ctx.beginPath();
     ctx.moveTo(point1[0], point1[1]);
     ctx.lineTo(point2[0],point2[1]);
-    ctx.stroke();
     //line 2
-    ctx.beginPath();
-    ctx.moveTo(point2[0], point2[1]);
     ctx.lineTo(point3[0],point3[1]);
-    ctx.stroke();
     //line 3
-    ctx.beginPath();
-    ctx.moveTo(point3[0], point3[1]);
     ctx.lineTo(point1[0],point1[1]);
     ctx.stroke();
 }
