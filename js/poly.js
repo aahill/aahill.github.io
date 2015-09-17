@@ -4,7 +4,7 @@ var MIN_STOPS = 2;
 //number of actual stops
 var numStops = generateWholeNum(MIN_STOPS, MAX_STOPS);
 //number of triangle points
-var numTrianglePoints = generateWholeNum(15,33);
+var numTrianglePoints = generateWholeNum(30,90);
 
 var trianglePoints = [];
 
