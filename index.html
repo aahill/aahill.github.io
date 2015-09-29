@@ -1,22 +1,24 @@
+<meta charset="UTF-8"> 
 <html>
-    <head>
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
-        <link href='css/style.css' rel='stylesheet' type='text/css'>
-        <link href='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js'>
-        <link type="text/javascript" href='js/app.js'>
-        <link type="text/javascript" href='js/controllers/contentController.js'>
-    </head>
-    <body ng-app="app"> 
-        <div id="contentWrapper" ng-controller="contentController">   
-            <div id="header" ng-if="displayContent === true">
-                <div id="headerText">
-                    <p> Aaron Hill</p>
-                    <a ng-click="al()">about</a>
-                    <a href='http://aahill.github.io/poly.html'>projects</a>
-                    <a>github</a>
-                </div>
-                <p id="headerDescriptor">Welcome, this is my website.</p>{{test}}
+<head>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+<link href='css/style.css' rel='stylesheet' type='text/css'>
+<script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js'></script>
+<script type="text/javascript" src='js/app.js'></script>
+<script type="text/javascript" src='js/controllers/contentController.js'></script>
+</head>
+<body ng-app="app"> 
+    <div id="contentWrapper" ng-controller="contentController">
+        <div id="headerWrapper" ng-include="'pages/header.html'"></div>
+
+        <div id=cont>
+            <div ng-show="content == 'welcome'">
+                <span ng-include="'pages/welcome.html'"></span>
+            </div> 
+            <div ng-show="content === 'about'">
+                <span ng-include="'pages/about.html'"></span>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
