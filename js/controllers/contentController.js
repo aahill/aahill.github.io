@@ -7,5 +7,6 @@ app.controller("contentController", ['$scope', function($scope){
 	};
     $scope.switchContent = function(contentName){
         $scope.content = contentName;
+        alert($scope.content);
     }
 }]);

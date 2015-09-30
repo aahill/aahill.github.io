@@ -42,6 +42,32 @@ background-image:
     margin: -100px 0 0 -400px;
 }
 
+.content{
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    position:relative;
+}
+
+/*.ng-enter{
+    top: -100%;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.ng-enter-active{
+    top: 0;
+}
+
+.ng-leave{
+    top: 0;
+}
+
+.ng-leave-active{
+    top: 100%;
+}
+.ng-enter{ animation: scaleUp 0.5s both ease-in; z-index: 8888; }
+.ng-leave{ animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }*/
 #header{
     border-bottom: 1px dotted #333333;
     margin-top: 20px;
@@ -50,6 +76,7 @@ background-image:
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 6px;
+    z-index: 9999;
 }
 
 #headerDescriptor{
@@ -68,3 +95,22 @@ background-image:
 nav a:hover {
     background-color: #CC00FF
 }
+
+.content.ng-enter,
+.content.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.content.ng-enter {
+    top: -50px;
+}
+.content.ng-enter-active {
+    top: 0;
+}
+.content.ng-leave {
+    top: 0;
+}
+.content.ng-leave-active {
+    top: 100%;
+}
+
