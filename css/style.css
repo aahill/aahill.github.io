@@ -69,7 +69,6 @@ background-image:
 .ng-enter{ animation: scaleUp 0.5s both ease-in; z-index: 8888; }
 .ng-leave{ animation: slideOutLeft 0.5s both ease-in; z-index: 9999; }*/
 #header{
-    position: relative;
     border-bottom: 1px dotted #333333;
     margin-top: 20px;
     width: 90%;
@@ -77,6 +76,7 @@ background-image:
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 6px;
+    z-index: 9999;
 }
 
 #headerDescriptor{
@@ -96,21 +96,13 @@ nav a:hover {
     background-color: #CC00FF
 }
 
-#headlineText1{
-    width: 100%;
-    height: 50px; 
-    font-size: 1.5em;
-    text-align:center;
-    vertical-align:middle;
-}
-
-/*.content.ng-enter,
+.content.ng-enter,
 .content.ng-leave {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
 .content.ng-enter {
-    top: -100px;
+    top: -50px;
 }
 .content.ng-enter-active {
     top: 0;
@@ -120,29 +112,5 @@ nav a:hover {
 }
 .content.ng-leave-active {
     top: 100%;
-}*/
-
-/* USE THE CODE BELOW
-.content.ng-enter{
-    opacity: 0;
 }
-
-.content.ng-enter.ng-enter-active{
-    top:0;
-    left:0;
-    opacity: 1;
-}
-
-.content.ng-leave.ng-active{
-    top:5px;
-    left:5px;
-    opacity:1;
-}
-
-.content.ng-leave{
-    top:0;
-    left:0;
-    opacity:0;
-}
-*/
 
