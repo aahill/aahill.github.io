@@ -1,5 +1,5 @@
 //number of minimum and maximum color stops (color changes in the gradient)
-var MAX_STOPS = 4;
+var MAX_STOPS = 5;
 var MIN_STOPS = 2;
 //number of actual stops
 var numStops = generateWholeNum(MIN_STOPS, MAX_STOPS);
@@ -24,7 +24,7 @@ function getTriangleCenter(p1,p2,p3){
 
 //generate a random hex color
 function generateColor(){
-    var color ='#'+Math.floor(Math.random()*16777215).toString(16);
+    var color = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
     console.log(color);
     return color;
 }
@@ -61,7 +61,7 @@ for(var i=0; i< numTrianglePoints; i++){
 //begin triangulation process
 var triangleVertices = Delaunay.triangulate(trianglePoints);
 
-for(var i=0; i < triangleVertices.length - 1 - triangleVertices.length % 3; i += 3){
+for(var i=0; i < triangleVertices.length - triangleVertices.length % 3; i += 3){
     var point1 = trianglePoints[triangleVertices[i]];
     var point2 = trianglePoints[triangleVertices[i+1]];
     var point3 = trianglePoints[triangleVertices[i+2]];
@@ -78,7 +78,6 @@ for(var i=0; i < triangleVertices.length - 1 - triangleVertices.length % 3; i +=
     ctx.stroke();
     var triangleCenter = getTriangleCenter(point1,point2,point3);
     var color = getPixel(triangleCenter[0], triangleCenter[1]);
-    console.log('resulting hex: ', color);
     ctx.closePath();
     ctx.fillStyle = color;
     ctx.fill();
