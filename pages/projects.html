@@ -1,0 +1,17 @@
+<div>
+	<p>This is an abbreviated list of some of the things I've done or am working on, with more to come</p>
+	<ul id="projectList">
+		<li>
+			<a href="" ng-click="displayedProject = 'poly'"> A low poly generation app</a>
+			<div id="content" ng-switch="displayedProject">
+				<div ng-switch-when="poly" >
+					<span ng-include="'pages/poly.html'"></span>
+				</div>
+			</div>
+		</li>
+		<li>
+			<a href=""> more coming soon </a>
+		</li>
+	</ul>
+	
+</div>
