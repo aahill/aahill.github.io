@@ -59,7 +59,12 @@ app.controller('polyController', ['$scope', function($scope){
     //get hex value of a pixel at X,Y using canvas context
     function getPixel(x, y, ctx){
         var p = ctx.getImageData(x, y, 1, 1).data; 
-        var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);  
+        //darken the colors by a random constant
+        darken_factor = Math.random() * (.4 - .001) + .001;
+        var r = p[0] * (1 - darken_factor);
+        var g = p[1] * (1 - darken_factor);
+        var b = p[2] * (1 - darken_factor);
+        var hex = "#" + ("000000" + rgbToHex(r, g, b)).slice(-6);  
         return hex;
     }
 
@@ -86,7 +91,7 @@ app.controller('polyController', ['$scope', function($scope){
             //draw lines corresponding to the triangle
             //line 1  
             ctx.beginPath();
-            ctx.strokeStyle = "rgba(255,255,255,3)";           
+            ctx.strokeStyle = "rgba(255,255,255,0)";           
             ctx.moveTo(point1[0], point1[1]);
             ctx.lineTo(point2[0],point2[1]);
             //line 2
