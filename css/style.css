@@ -27,9 +27,15 @@ background-image:
     font-size: .9em;
     color: #666666;
     padding-left: 10px;
-    cursor: pointer;
     text-decoration: none;
-
+}
+a .subText{
+    cursor: pointer;
+}
+.projectContainer .subText{
+    position: relative;
+    display: block;
+    text-align: center;
 }
 
 #contentWrapper {
