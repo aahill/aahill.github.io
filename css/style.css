@@ -15,8 +15,8 @@ background-image:
 }
 
 .headlineText {
+    margin: 0;
     display: inline;
-    padding-left: 10px;
     font-size: 1.5em;
     text-decoration: none;
     color: #000000;
@@ -28,6 +28,7 @@ background-image:
     color: #666666;
     padding-left: 10px;
     cursor: pointer;
+    text-decoration: none;
 
 }
 
@@ -81,8 +82,29 @@ background-image:
     width: 100%;
 }
 
+.projectButton{
+
+    padding: 4px 12px;
+    font-size: 1.12em;
+    /*background-color: #333333;*/
+    color: #FFFFFF;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #5297D8;
+}
+
+.projectDescription{
+    display: block;
+    padding-bottom: 0px;
+}
+
+.projectTitle{
+    height: 33px;
+    border-bottom: 1px dotted #333333;
+}
+
 nav a:hover {
-    background-color: #CC00FF
+    background-color: #CCE3EB;
 }
 
 /*.content.ng-enter,
