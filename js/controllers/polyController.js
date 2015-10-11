@@ -74,9 +74,10 @@ app.controller('polyController', ['$scope', function($scope){
         	var x = generateWholeNum(0,canvasWidth);
         	var y = generateWholeNum(0,canvasHeight);
             trianglePoints.push([x,y]);
-        	ctx.rect(x,y,1,1);
+            //draws points on canvas
+        	/*ctx.rect(x,y,0,0);
             ctx.fillStyle="black";
-        	ctx.fill();
+        	ctx.fill();*/
         }
     }
 

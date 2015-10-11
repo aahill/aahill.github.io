@@ -32,9 +32,16 @@ background-image:
 a .subText{
     cursor: pointer;
 }
+.projectTitle .subText{
+    font-style: italic;
+}
+
+.projectTitle .headlineText{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
 .projectContainer .subText{
-    position: relative;
-    display: block;
     text-align: center;
 }
 
