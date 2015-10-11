@@ -61,6 +61,10 @@ a .subText{
     top: 20%;
     left: 50%;
     margin: -100px 0 0 -400px;
+    /*code for creating a box shadow around content*/
+    /*-webkit-box-shadow: 10px 2px 42px -7px rgba(0,0,0,1);
+    -moz-box-shadow: 10px 2px 42px -7px rgba(0,0,0,1);
+    box-shadow: 10px 2px 42px -7px rgba(0,0,0,1);*/
 }
 
 .content{

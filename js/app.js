@@ -16,6 +16,10 @@ app.config(function($routeProvider){
     	templateUrl : 'pages/projects.html',
     	controller : 'contentController'
     })
+    .when('/contact', {
+        templateUrl : 'pages/contact.html',
+        controller : 'contentController'
+    })
     .otherwise({
     	controller: 'contentController',
     	redirectTo: '/welcome'
