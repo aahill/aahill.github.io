@@ -1,13 +1,15 @@
 app.controller("contentController", ['$scope', function($scope){
-	$scope.displayContent = true;
-    $scope.content="welcome";
-	$scope.test = "thanks";
+
 	$scope.displayedProject = "";
 	$scope.al = function(){
 		alert('hi');
 	};
     $scope.switchContent = function(contentName){
-        $scope.content = contentName;
-        alert($scope.content);
+    	if($scope.displayedProject === contentName){
+    		$scope.displayedProject = "";
+    	}
+    	else{
+        	$scope.displayedProject = contentName;
+        }
     }
 }]);
