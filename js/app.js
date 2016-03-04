@@ -21,7 +21,7 @@ app.config(function($routeProvider){
         controller : 'contentController'
     })
     .when('/template', {
-        tempalteUrl : 'pages/tempalte.html',
+        tempalteUrl : 'pages/template.html',
         controller : 'contentController'
     })
     .otherwise({
