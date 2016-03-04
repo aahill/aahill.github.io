@@ -20,6 +20,10 @@ app.config(function($routeProvider){
         templateUrl : 'pages/contact.html',
         controller : 'contentController'
     })
+    .when('/template', {
+        tempalteUrl : 'pages/tempalte.html',
+        controller : 'contentController'
+    })
     .otherwise({
     	controller: 'contentController',
     	redirectTo: '/welcome'
