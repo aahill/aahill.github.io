@@ -24,6 +24,10 @@ app.config(function($routeProvider){
         templateUrl : 'pages/template.html',
         controller : 'contentController'
     })
+    .when('/refugees', {
+        templateUrl : 'pages/template.html',
+        controller : 'contentController'
+    })
     .otherwise({
     	controller: 'contentController',
     	redirectTo: '/welcome'
